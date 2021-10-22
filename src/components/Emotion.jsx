@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 export const Emotion = () => {
   const containeStyle = css`
     border: solid 2px #392eff;
@@ -12,10 +13,22 @@ export const Emotion = () => {
     align-items: center;
   `;
 
+  const titleStyle = css({
+    margin: 0,
+    color: "#3d84a8"
+  });
+
   return (
     <div css={containeStyle}>
-      <p>- Emotion -</p>
-      <button>FIGHT!</button>
+      <p css={titleStyle}>- Emotiion -</p>
+      <SButton>FIGHT!</SButton>
     </div>
   );
 };
+
+const SButton = styled.button`
+  background-color: #abedd8;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+`;
